@@ -4,10 +4,11 @@ OneRaid 是集合各种Raid卡操作小工具 🚀
 ## 🐰上手指南
 <details>
 <summary><b>依赖安装（python3）</b></summary>
-1.. 安装ptable
+1. 安装ptable
 ```bash
-    pip3 install ptable
+pip3 install ptable
 ```
+
 </details>
 
 
@@ -60,3 +61,14 @@ OneRaid 是集合各种Raid卡操作小工具 🚀
 - [sas2iru](https://github.com/robertruan-x/OneRaid/tree/main/docs/sas2iru) - 一种raid控制软件
 
 ## 🐔后续计划
+- [ ] raid创建和删除，多软件支持
+- [ ] 优化错误处理
+- [ ] 优化颜色输出
+- [ ] 安装软件包功能优化
+- [ ] 
+
+更多信息请参阅 [开发计划](https://github.com/robertruan-x/OneRaid/blob/main/docs/todolist.md)
+
+## 🐻鸣谢
+
+感谢各位支持,感谢github
