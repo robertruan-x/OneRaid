@@ -16,7 +16,7 @@ OneRaid 是集合各种Raid卡操作小工具 🚀
 
 当然项目中也会有各种raid控制软件的教学，你也能在这里学习到各种raid软件的操作命令和例子😊
 
-目前OneRaid还在开发中，如果各位有任何问题和改进建议，欢迎提交Issues和PR，如果项目对你有用，可以给它一个星星✨支持一下
+目前OneRaid还在开发中，如果各位有任何问题和改进建议，欢迎提交[Issues](https://github.com/robertruan-x/OneRaid/issues)和[PR](https://github.com/robertruan-x/OneRaid/pulls)，如果项目对你有用，可以给它一个星星✨支持一下
 
 ## 🐲功能特性
 **基础信息收集**
