@@ -1,0 +1,75 @@
+Controllers found: 1
+----------------------------------------------------------------------
+Controller information
+----------------------------------------------------------------------
+   Controller Status                        : Optimal
+   Controller Mode                          : HBA
+   Channel description                      : SCSI
+   Controller Model                         : Adaptec SmartIOC 8i
+   Controller Serial Number                 : Unknown
+   Controller World Wide Name               : 50123456789ABC00
+   Physical Slot                            : 10
+   Temperature                              : 67 C/ 152 F (Normal)
+   Host bus type                            : PCIe 3.0
+   Host bus speed                           : 7880 MBps
+   Host bus link width                      : 8 bit(s)/link(s)
+   PCI Address (Bus:Device:Function)        : 0:1:0:0
+   Number of Ports                          : 2
+   Internal Port Count                      : 2
+   External Port Count                      : 0
+   NCQ status                               : Enabled
+   Post Prompt Timeout                      : 0 seconds
+   Boot Controller                          : False
+   Primary Boot Volume                      : None
+   Secondary Boot Volume                    : None
+   Driver Name                              : aacraid
+   Manufacturing Part Number                : Not Applicable
+   Manufacturing Spare Part Number          : Not Applicable
+   Manufacturing Wellness Log               : Not Applicable
+   NVRAM Checksum Status                    : Passed
+   --------------------------------------------------------
+   I2C Settings
+   --------------------------------------------------------
+   I2C Address                              : 0xDE
+   I2C Clock Speed                          : 400 KHZ
+   I2C Clock Stretching                     : Enabled
+   --------------------------------------------------------
+   Controller Version Information
+   --------------------------------------------------------
+   Firmware                                 : 3.52[0]
+   Driver                                   : 1.2.1.50834
+   Hardware Revision                        : B
+   --------------------------------------------------------
+   Temperature Sensors Information
+   --------------------------------------------------------
+   Sensor ID                                : 0
+   Current Value                            : 42 deg C
+   Max Value Since Powered On               : 48 deg C
+   Location                                 : Inlet Ambient
+
+   Sensor ID                                : 1
+   Current Value                            : 67 deg C
+   Max Value Since Powered On               : 75 deg C
+   Location                                 : ASIC
+
+   --------------------------------------------------------
+   Connector information
+                   
+   --------------------------------------------------------
+   Connector #0                             
+      Connector Name                        : CN0
+      Functional Mode                       : HBA
+      Connector Location                    : Internal
+      SAS Address                           : 50123456789ABC00
+
+
+   Connector #1                             
+      Connector Name                        : CN1
+      Functional Mode                       : HBA
+      Connector Location                    : Internal
+      SAS Address                           : 50123456789ABC04
+
+
+
+
+Command completed successfully.

@@ -1,0 +1,928 @@
+Controllers found: 1
+----------------------------------------------------------------------
+Physical Device information
+----------------------------------------------------------------------
+   Channel #0:
+      Device #8
+         Device is a Hard drive
+         State                              : Raw (Pass Through)
+         Drive has stale RIS data           : False
+         Disk Name                          : /dev/sda
+         Block Size                         : 512 Bytes
+         Physical Block Size                : 512 Bytes
+         Transfer Speed                     : SAS 12.0 Gb/s
+         Reported Channel,Device(T:L)       : 0,8(8:0)
+         Reported Location                  : Enclosure 1, Slot 0(Connector 0:CN0)
+         Vendor                             : SEAGATE 
+         Model                              : ST300MM0048     
+         Firmware                           : N001
+         Serial number                      : W0K0G1CK0000E7416X4Q
+         World-wide name                    : 5000C5009F562AE5
+         Reserved Size                      : 32768 KB
+         Total Size                         : 286102 MB
+         S.M.A.R.T.                         : No
+         S.M.A.R.T. warnings                : 0
+         SSD                                : No
+         Boot Type                          : None
+         Rotational Speed                   : 10500 RPM
+         Current Temperature                : 26 deg C
+         Maximum Temperature                : Not Available
+         Threshold Temperature              : 60 deg C
+         PHY Count                          : 2
+         Drive Configuration Type           : HBA
+         Drive Encryption Capability        : None
+         Drive Encryption Status            : Not Applicable
+         Mount Point(s)                     : /xxx 1000 MB  Partition Number 1 
+         Drive Exposed to OS                : True
+         Sanitize Erase Support             : False
+         Drive Unique ID                    : 5000C5009F562AE7
+         Last Failure Reason                : No Failure
+      ----------------------------------------------------------------
+      Device Phy Information                
+      ----------------------------------------------------------------
+         Phy #0
+            Negotiated Physical Link Rate   : 12 Gbps 
+            Negotiated Logical Link Rate    : 12 Gbps 
+            Maximum Link Rate               : 12 Gbps 
+         Phy #1
+            Negotiated Physical Link Rate   : unknown 
+            Negotiated Logical Link Rate    : unknown 
+            Maximum Link Rate               : 12 Gbps 
+
+      ----------------------------------------------------------------
+      Device Error Counters                 
+      ----------------------------------------------------------------
+         Aborted Commands                   : 0
+         Bad Target Errors                  : 0
+         Ecc Recovered Read Errors          : 0
+         Failed Read Recovers               : 0
+         Failed Write Recovers              : 0
+         Format Errors                      : 0
+         Hardware Errors                    : 0
+         Hard Read Errors                   : 0
+         Hard Write Errors                  : 0
+         Hot Plug Count                     : 0
+         Media Failures                     : 0
+         Not Ready Errors                   : 0
+         Other Time Out Errors              : 0
+         Predictive Failures                : 0
+         Retry Recovered Read Errors        : 0
+         Retry Recovered Write Errors       : 0
+         Scsi Bus Faults                    : 0
+         Sectors Reads                      : 0
+         Sectors Written                    : 0
+         Service Hours                      : 0
+
+      Device #9
+         Device is a Hard drive
+         State                              : Raw (Pass Through)
+         Drive has stale RIS data           : False
+         Disk Name                          : /dev/sdb
+         Block Size                         : 512 Bytes
+         Physical Block Size                : 4K Bytes
+         Transfer Speed                     : SATA 6.0 Gb/s
+         Reported Channel,Device(T:L)       : 0,9(9:0)
+         Reported Location                  : Enclosure 1, Slot 1(Connector 0:CN0)
+         Vendor                             : ATA     
+         Model                              : HGST HUS726060AL
+         Firmware                           : APBDTAF0
+         Serial number                      : K8GJE56D
+         World-wide name                    : 59CE895DD30A0001
+         Reserved Size                      : 32768 KB
+         Total Size                         : 5723166 MB
+         S.M.A.R.T.                         : No
+         S.M.A.R.T. warnings                : 0
+         SSD                                : No
+         NCQ supported                      : Supported
+         NCQ status                         : Enabled
+         Boot Type                          : None
+         Rotational Speed                   : 7200 RPM
+         Current Temperature                : 30 deg C
+         Maximum Temperature                : 42 deg C
+         Threshold Temperature              : 65 deg C
+         PHY Count                          : 1
+         Drive Configuration Type           : HBA
+         Drive Encryption Capability        : None
+         Drive Encryption Status            : Not Applicable
+         Mount Point(s)                     : /xxx 4294399007 MB  Partition Number 0 
+         Drive Exposed to OS                : True
+         Sanitize Erase Support             : False
+         Drive Unique ID                    : 3F3BE61BFFFFBE54
+         Last Failure Reason                : No Failure
+      ----------------------------------------------------------------
+      Device Phy Information                
+      ----------------------------------------------------------------
+         Phy #0
+            Negotiated Physical Link Rate   : 6 Gbps 
+            Negotiated Logical Link Rate    : 6 Gbps 
+            Maximum Link Rate               : 6 Gbps 
+
+      ----------------------------------------------------------------
+      Device Error Counters                 
+      ----------------------------------------------------------------
+         Aborted Commands                   : 0
+         Bad Target Errors                  : 0
+         Ecc Recovered Read Errors          : 0
+         Failed Read Recovers               : 0
+         Failed Write Recovers              : 0
+         Format Errors                      : 0
+         Hardware Errors                    : 0
+         Hard Read Errors                   : 0
+         Hard Write Errors                  : 0
+         Hot Plug Count                     : 0
+         Media Failures                     : 0
+         Not Ready Errors                   : 0
+         Other Time Out Errors              : 0
+         Predictive Failures                : 0
+         Retry Recovered Read Errors        : 0
+         Retry Recovered Write Errors       : 0
+         Scsi Bus Faults                    : 0
+         Sectors Reads                      : 53
+         Sectors Written                    : 0
+         Service Hours                      : 0
+
+      Device #10
+         Device is a Hard drive
+         State                              : Raw (Pass Through)
+         Drive has stale RIS data           : False
+         Disk Name                          : /dev/sdc
+         Block Size                         : 512 Bytes
+         Physical Block Size                : 4K Bytes
+         Transfer Speed                     : SATA 6.0 Gb/s
+         Reported Channel,Device(T:L)       : 0,10(10:0)
+         Reported Location                  : Enclosure 1, Slot 2(Connector 0:CN0)
+         Vendor                             : ATA     
+         Model                              : HGST HUS726060AL
+         Firmware                           : APBDTAF0
+         Serial number                      : K8GJE75D
+         World-wide name                    : 59CE895DD30A0002
+         Reserved Size                      : 32768 KB
+         Total Size                         : 5723166 MB
+         S.M.A.R.T.                         : No
+         S.M.A.R.T. warnings                : 0
+         SSD                                : No
+         NCQ supported                      : Supported
+         NCQ status                         : Enabled
+         Boot Type                          : None
+         Rotational Speed                   : 7200 RPM
+         Current Temperature                : 31 deg C
+         Maximum Temperature                : 43 deg C
+         Threshold Temperature              : 65 deg C
+         PHY Count                          : 1
+         Drive Configuration Type           : HBA
+         Drive Encryption Capability        : None
+         Drive Encryption Status            : Not Applicable
+         Mount Point(s)                     : /xxx 4294399007 MB  Partition Number 0 
+         Drive Exposed to OS                : True
+         Sanitize Erase Support             : False
+         Drive Unique ID                    : 3FFC7474FF7FFB3B
+         Last Failure Reason                : No Failure
+      ----------------------------------------------------------------
+      Device Phy Information                
+      ----------------------------------------------------------------
+         Phy #0
+            Negotiated Physical Link Rate   : 6 Gbps 
+            Negotiated Logical Link Rate    : 6 Gbps 
+            Maximum Link Rate               : 6 Gbps 
+
+      ----------------------------------------------------------------
+      Device Error Counters                 
+      ----------------------------------------------------------------
+         Aborted Commands                   : 0
+         Bad Target Errors                  : 0
+         Ecc Recovered Read Errors          : 0
+         Failed Read Recovers               : 0
+         Failed Write Recovers              : 0
+         Format Errors                      : 0
+         Hardware Errors                    : 0
+         Hard Read Errors                   : 0
+         Hard Write Errors                  : 0
+         Hot Plug Count                     : 0
+         Media Failures                     : 0
+         Not Ready Errors                   : 0
+         Other Time Out Errors              : 0
+         Predictive Failures                : 0
+         Retry Recovered Read Errors        : 0
+         Retry Recovered Write Errors       : 0
+         Scsi Bus Faults                    : 0
+         Sectors Reads                      : 49
+         Sectors Written                    : 0
+         Service Hours                      : 0
+
+      Device #11
+         Device is a Hard drive
+         State                              : Raw (Pass Through)
+         Drive has stale RIS data           : False
+         Disk Name                          : /dev/sdd
+         Block Size                         : 512 Bytes
+         Physical Block Size                : 4K Bytes
+         Transfer Speed                     : SATA 6.0 Gb/s
+         Reported Channel,Device(T:L)       : 0,11(11:0)
+         Reported Location                  : Enclosure 1, Slot 3(Connector 0:CN0)
+         Vendor                             : ATA     
+         Model                              : HGST HUS726060AL
+         Firmware                           : APBDTAF0
+         Serial number                      : K8GHHLJD
+         World-wide name                    : 59CE895DD30A0003
+         Reserved Size                      : 32768 KB
+         Total Size                         : 5723166 MB
+         S.M.A.R.T.                         : No
+         S.M.A.R.T. warnings                : 0
+         SSD                                : No
+         NCQ supported                      : Supported
+         NCQ status                         : Enabled
+         Boot Type                          : None
+         Rotational Speed                   : 7200 RPM
+         Current Temperature                : 32 deg C
+         Maximum Temperature                : 45 deg C
+         Threshold Temperature              : 65 deg C
+         PHY Count                          : 1
+         Drive Configuration Type           : HBA
+         Drive Encryption Capability        : None
+         Drive Encryption Status            : Not Applicable
+         Mount Point(s)                     : /xxx 4294399007 MB  Partition Number 0 
+         Drive Exposed to OS                : True
+         Sanitize Erase Support             : False
+         Drive Unique ID                    : 3F7CF2B47FEF77EE
+         Last Failure Reason                : No Failure
+      ----------------------------------------------------------------
+      Device Phy Information                
+      ----------------------------------------------------------------
+         Phy #0
+            Negotiated Physical Link Rate   : 6 Gbps 
+            Negotiated Logical Link Rate    : 6 Gbps 
+            Maximum Link Rate               : 6 Gbps 
+
+      ----------------------------------------------------------------
+      Device Error Counters                 
+      ----------------------------------------------------------------
+         Aborted Commands                   : 0
+         Bad Target Errors                  : 0
+         Ecc Recovered Read Errors          : 0
+         Failed Read Recovers               : 0
+         Failed Write Recovers              : 0
+         Format Errors                      : 0
+         Hardware Errors                    : 0
+         Hard Read Errors                   : 0
+         Hard Write Errors                  : 0
+         Hot Plug Count                     : 0
+         Media Failures                     : 0
+         Not Ready Errors                   : 0
+         Other Time Out Errors              : 0
+         Predictive Failures                : 0
+         Retry Recovered Read Errors        : 0
+         Retry Recovered Write Errors       : 0
+         Scsi Bus Faults                    : 0
+         Sectors Reads                      : 49
+         Sectors Written                    : 0
+         Service Hours                      : 0
+
+      Device #12
+         Device is a Hard drive
+         State                              : Raw (Pass Through)
+         Drive has stale RIS data           : False
+         Disk Name                          : /dev/sde
+         Block Size                         : 512 Bytes
+         Physical Block Size                : 4K Bytes
+         Transfer Speed                     : SATA 6.0 Gb/s
+         Reported Channel,Device(T:L)       : 0,12(12:0)
+         Reported Location                  : Enclosure 1, Slot 4(Connector 0:CN0)
+         Vendor                             : ATA     
+         Model                              : HGST HUS726060AL
+         Firmware                           : APBDTAF0
+         Serial number                      : K8GJ9KWD
+         World-wide name                    : 59CE895DD30A0004
+         Reserved Size                      : 32768 KB
+         Total Size                         : 5723166 MB
+         S.M.A.R.T.                         : No
+         S.M.A.R.T. warnings                : 0
+         SSD                                : No
+         NCQ supported                      : Supported
+         NCQ status                         : Enabled
+         Boot Type                          : None
+         Rotational Speed                   : 7200 RPM
+         Current Temperature                : 33 deg C
+         Maximum Temperature                : 45 deg C
+         Threshold Temperature              : 65 deg C
+         PHY Count                          : 1
+         Drive Configuration Type           : HBA
+         Drive Encryption Capability        : None
+         Drive Encryption Status            : Not Applicable
+         Mount Point(s)                     : /xxx 4294399007 MB  Partition Number 0 
+         Drive Exposed to OS                : True
+         Sanitize Erase Support             : False
+         Drive Unique ID                    : 3FBCEB6DFFEE8AA5
+         Last Failure Reason                : No Failure
+      ----------------------------------------------------------------
+      Device Phy Information                
+      ----------------------------------------------------------------
+         Phy #0
+            Negotiated Physical Link Rate   : 6 Gbps 
+            Negotiated Logical Link Rate    : 6 Gbps 
+            Maximum Link Rate               : 6 Gbps 
+
+      ----------------------------------------------------------------
+      Device Error Counters                 
+      ----------------------------------------------------------------
+         Aborted Commands                   : 0
+         Bad Target Errors                  : 0
+         Ecc Recovered Read Errors          : 0
+         Failed Read Recovers               : 0
+         Failed Write Recovers              : 0
+         Format Errors                      : 0
+         Hardware Errors                    : 0
+         Hard Read Errors                   : 0
+         Hard Write Errors                  : 0
+         Hot Plug Count                     : 0
+         Media Failures                     : 0
+         Not Ready Errors                   : 0
+         Other Time Out Errors              : 0
+         Predictive Failures                : 0
+         Retry Recovered Read Errors        : 0
+         Retry Recovered Write Errors       : 0
+         Scsi Bus Faults                    : 0
+         Sectors Reads                      : 49
+         Sectors Written                    : 0
+         Service Hours                      : 0
+
+      Device #13
+         Device is a Hard drive
+         State                              : Raw (Pass Through)
+         Drive has stale RIS data           : False
+         Disk Name                          : /dev/sdf
+         Block Size                         : 512 Bytes
+         Physical Block Size                : 4K Bytes
+         Transfer Speed                     : SATA 6.0 Gb/s
+         Reported Channel,Device(T:L)       : 0,13(13:0)
+         Reported Location                  : Enclosure 1, Slot 5(Connector 0:CN0)
+         Vendor                             : ATA     
+         Model                              : HGST HUS726060AL
+         Firmware                           : APBDTAF0
+         Serial number                      : K8GJ5T4D
+         World-wide name                    : 59CE895DD30A0005
+         Reserved Size                      : 32768 KB
+         Total Size                         : 5723166 MB
+         S.M.A.R.T.                         : No
+         S.M.A.R.T. warnings                : 0
+         SSD                                : No
+         NCQ supported                      : Supported
+         NCQ status                         : Enabled
+         Boot Type                          : None
+         Rotational Speed                   : 7200 RPM
+         Current Temperature                : 32 deg C
+         Maximum Temperature                : 44 deg C
+         Threshold Temperature              : 65 deg C
+         PHY Count                          : 1
+         Drive Configuration Type           : HBA
+         Drive Encryption Capability        : None
+         Drive Encryption Status            : Not Applicable
+         Mount Point(s)                     : /xxx 4294399007 MB  Partition Number 0 
+         Drive Exposed to OS                : True
+         Sanitize Erase Support             : False
+         Drive Unique ID                    : 3FE8E0CD7FFEDF61
+         Last Failure Reason                : No Failure
+      ----------------------------------------------------------------
+      Device Phy Information                
+      ----------------------------------------------------------------
+         Phy #0
+            Negotiated Physical Link Rate   : 6 Gbps 
+            Negotiated Logical Link Rate    : 6 Gbps 
+            Maximum Link Rate               : 6 Gbps 
+
+      ----------------------------------------------------------------
+      Device Error Counters                 
+      ----------------------------------------------------------------
+         Aborted Commands                   : 0
+         Bad Target Errors                  : 0
+         Ecc Recovered Read Errors          : 0
+         Failed Read Recovers               : 0
+         Failed Write Recovers              : 0
+         Format Errors                      : 0
+         Hardware Errors                    : 0
+         Hard Read Errors                   : 0
+         Hard Write Errors                  : 0
+         Hot Plug Count                     : 0
+         Media Failures                     : 0
+         Not Ready Errors                   : 0
+         Other Time Out Errors              : 0
+         Predictive Failures                : 0
+         Retry Recovered Read Errors        : 0
+         Retry Recovered Write Errors       : 0
+         Scsi Bus Faults                    : 0
+         Sectors Reads                      : 49
+         Sectors Written                    : 0
+         Service Hours                      : 0
+
+      Device #14
+         Device is a Hard drive
+         State                              : Raw (Pass Through)
+         Drive has stale RIS data           : False
+         Disk Name                          : /dev/sdg
+         Block Size                         : 512 Bytes
+         Physical Block Size                : 4K Bytes
+         Transfer Speed                     : SATA 6.0 Gb/s
+         Reported Channel,Device(T:L)       : 0,14(14:0)
+         Reported Location                  : Enclosure 1, Slot 6(Connector 0:CN0)
+         Vendor                             : ATA     
+         Model                              : HGST HUS726060AL
+         Firmware                           : APBDTAF0
+         Serial number                      : K8GJ8JDD
+         World-wide name                    : 59CE895DD30A0006
+         Reserved Size                      : 32768 KB
+         Total Size                         : 5723166 MB
+         S.M.A.R.T.                         : No
+         S.M.A.R.T. warnings                : 0
+         SSD                                : No
+         NCQ supported                      : Supported
+         NCQ status                         : Enabled
+         Boot Type                          : None
+         Rotational Speed                   : 7200 RPM
+         Current Temperature                : 33 deg C
+         Maximum Temperature                : 46 deg C
+         Threshold Temperature              : 65 deg C
+         PHY Count                          : 1
+         Drive Configuration Type           : HBA
+         Drive Encryption Capability        : None
+         Drive Encryption Status            : Not Applicable
+         Mount Point(s)                     : /xxx 4294399007 MB  Partition Number 0 
+         Drive Exposed to OS                : True
+         Sanitize Erase Support             : False
+         Drive Unique ID                    : 3FFC99F3FF6E7C66
+         Last Failure Reason                : No Failure
+      ----------------------------------------------------------------
+      Device Phy Information                
+      ----------------------------------------------------------------
+         Phy #0
+            Negotiated Physical Link Rate   : 6 Gbps 
+            Negotiated Logical Link Rate    : 6 Gbps 
+            Maximum Link Rate               : 6 Gbps 
+
+      ----------------------------------------------------------------
+      Device Error Counters                 
+      ----------------------------------------------------------------
+         Aborted Commands                   : 0
+         Bad Target Errors                  : 0
+         Ecc Recovered Read Errors          : 0
+         Failed Read Recovers               : 0
+         Failed Write Recovers              : 0
+         Format Errors                      : 0
+         Hardware Errors                    : 0
+         Hard Read Errors                   : 0
+         Hard Write Errors                  : 0
+         Hot Plug Count                     : 0
+         Media Failures                     : 0
+         Not Ready Errors                   : 0
+         Other Time Out Errors              : 0
+         Predictive Failures                : 0
+         Retry Recovered Read Errors        : 0
+         Retry Recovered Write Errors       : 0
+         Scsi Bus Faults                    : 0
+         Sectors Reads                      : 49
+         Sectors Written                    : 0
+         Service Hours                      : 0
+
+      Device #15
+         Device is a Hard drive
+         State                              : Raw (Pass Through)
+         Drive has stale RIS data           : False
+         Disk Name                          : /dev/sdh
+         Block Size                         : 512 Bytes
+         Physical Block Size                : 4K Bytes
+         Transfer Speed                     : SATA 6.0 Gb/s
+         Reported Channel,Device(T:L)       : 0,15(15:0)
+         Reported Location                  : Enclosure 1, Slot 7(Connector 0:CN0)
+         Vendor                             : ATA     
+         Model                              : HGST HUS726060AL
+         Firmware                           : APBDTAF0
+         Serial number                      : K8GH0ZMD
+         World-wide name                    : 59CE895DD30A0007
+         Reserved Size                      : 32768 KB
+         Total Size                         : 5723166 MB
+         S.M.A.R.T.                         : No
+         S.M.A.R.T. warnings                : 0
+         SSD                                : No
+         NCQ supported                      : Supported
+         NCQ status                         : Enabled
+         Boot Type                          : None
+         Rotational Speed                   : 7200 RPM
+         Current Temperature                : 32 deg C
+         Maximum Temperature                : 45 deg C
+         Threshold Temperature              : 65 deg C
+         PHY Count                          : 1
+         Drive Configuration Type           : HBA
+         Drive Encryption Capability        : None
+         Drive Encryption Status            : Not Applicable
+         Mount Point(s)                     : /xxx 4294399007 MB  Partition Number 0 
+         Drive Exposed to OS                : True
+         Sanitize Erase Support             : False
+         Drive Unique ID                    : 3F7CC92AFFFE9FAD
+         Last Failure Reason                : No Failure
+      ----------------------------------------------------------------
+      Device Phy Information                
+      ----------------------------------------------------------------
+         Phy #0
+            Negotiated Physical Link Rate   : 6 Gbps 
+            Negotiated Logical Link Rate    : 6 Gbps 
+            Maximum Link Rate               : 6 Gbps 
+
+      ----------------------------------------------------------------
+      Device Error Counters                 
+      ----------------------------------------------------------------
+         Aborted Commands                   : 0
+         Bad Target Errors                  : 0
+         Ecc Recovered Read Errors          : 0
+         Failed Read Recovers               : 0
+         Failed Write Recovers              : 0
+         Format Errors                      : 0
+         Hardware Errors                    : 0
+         Hard Read Errors                   : 0
+         Hard Write Errors                  : 0
+         Hot Plug Count                     : 0
+         Media Failures                     : 0
+         Not Ready Errors                   : 0
+         Other Time Out Errors              : 0
+         Predictive Failures                : 0
+         Retry Recovered Read Errors        : 0
+         Retry Recovered Write Errors       : 0
+         Scsi Bus Faults                    : 0
+         Sectors Reads                      : 49
+         Sectors Written                    : 0
+         Service Hours                      : 0
+
+      Device #16
+         Device is a Hard drive
+         State                              : Raw (Pass Through)
+         Drive has stale RIS data           : False
+         Disk Name                          : /dev/sdi
+         Block Size                         : 512 Bytes
+         Physical Block Size                : 4K Bytes
+         Transfer Speed                     : SATA 6.0 Gb/s
+         Reported Channel,Device(T:L)       : 0,16(16:0)
+         Reported Location                  : Enclosure 1, Slot 8(Connector 0:CN0)
+         Vendor                             : ATA     
+         Model                              : ST6000NM0115-1YZ
+         Firmware                           :     DA25
+         Serial number                      : ZAD6B2Z9
+         World-wide name                    : 59CE895DD30A0008
+         Reserved Size                      : 32768 KB
+         Total Size                         : 5723166 MB
+         S.M.A.R.T.                         : No
+         S.M.A.R.T. warnings                : 0
+         SSD                                : No
+         NCQ supported                      : Supported
+         NCQ status                         : Enabled
+         Boot Type                          : None
+         Rotational Speed                   : 7200 RPM
+         Current Temperature                : 28 deg C
+         Maximum Temperature                : 44 deg C
+         Threshold Temperature              : 65 deg C
+         PHY Count                          : 1
+         Drive Configuration Type           : HBA
+         Drive Encryption Capability        : None
+         Drive Encryption Status            : Not Applicable
+         Mount Point(s)                     : Not Mounted
+         Drive Exposed to OS                : True
+         Sanitize Erase Support             : False
+         Drive Unique ID                    : 3F5CF4B1FFFFBFEF
+         Last Failure Reason                : No Failure
+      ----------------------------------------------------------------
+      Device Phy Information                
+      ----------------------------------------------------------------
+         Phy #0
+            Negotiated Physical Link Rate   : 6 Gbps 
+            Negotiated Logical Link Rate    : 6 Gbps 
+            Maximum Link Rate               : 6 Gbps 
+
+      ----------------------------------------------------------------
+      Device Error Counters                 
+      ----------------------------------------------------------------
+         Aborted Commands                   : 0
+         Bad Target Errors                  : 0
+         Ecc Recovered Read Errors          : 0
+         Failed Read Recovers               : 0
+         Failed Write Recovers              : 0
+         Format Errors                      : 0
+         Hardware Errors                    : 0
+         Hard Read Errors                   : 0
+         Hard Write Errors                  : 0
+         Hot Plug Count                     : 0
+         Media Failures                     : 0
+         Not Ready Errors                   : 0
+         Other Time Out Errors              : 0
+         Predictive Failures                : 0
+         Retry Recovered Read Errors        : 0
+         Retry Recovered Write Errors       : 0
+         Scsi Bus Faults                    : 0
+         Sectors Reads                      : 0
+         Sectors Written                    : 0
+         Service Hours                      : 15
+
+      Device #17
+         Device is a Hard drive
+         State                              : Raw (Pass Through)
+         Drive has stale RIS data           : False
+         Disk Name                          : /dev/sdj
+         Block Size                         : 512 Bytes
+         Physical Block Size                : 4K Bytes
+         Transfer Speed                     : SATA 6.0 Gb/s
+         Reported Channel,Device(T:L)       : 0,17(17:0)
+         Reported Location                  : Enclosure 1, Slot 9(Connector 0:CN0)
+         Vendor                             : ATA     
+         Model                              : HGST HUS726060AL
+         Firmware                           : APBDTAF0
+         Serial number                      : K8GHHAGD
+         World-wide name                    : 59CE895DD30A0009
+         Reserved Size                      : 32768 KB
+         Total Size                         : 5723166 MB
+         S.M.A.R.T.                         : No
+         S.M.A.R.T. warnings                : 0
+         SSD                                : No
+         NCQ supported                      : Supported
+         NCQ status                         : Enabled
+         Boot Type                          : None
+         Rotational Speed                   : 7200 RPM
+         Current Temperature                : 31 deg C
+         Maximum Temperature                : 46 deg C
+         Threshold Temperature              : 65 deg C
+         PHY Count                          : 1
+         Drive Configuration Type           : HBA
+         Drive Encryption Capability        : None
+         Drive Encryption Status            : Not Applicable
+         Mount Point(s)                     : /xxx 4294399007 MB  Partition Number 0 
+         Drive Exposed to OS                : True
+         Sanitize Erase Support             : False
+         Drive Unique ID                    : 3F147A2FFFF7FF65
+         Last Failure Reason                : No Failure
+      ----------------------------------------------------------------
+      Device Phy Information                
+      ----------------------------------------------------------------
+         Phy #0
+            Negotiated Physical Link Rate   : 6 Gbps 
+            Negotiated Logical Link Rate    : 6 Gbps 
+            Maximum Link Rate               : 6 Gbps 
+
+      ----------------------------------------------------------------
+      Device Error Counters                 
+      ----------------------------------------------------------------
+         Aborted Commands                   : 0
+         Bad Target Errors                  : 0
+         Ecc Recovered Read Errors          : 0
+         Failed Read Recovers               : 0
+         Failed Write Recovers              : 0
+         Format Errors                      : 0
+         Hardware Errors                    : 0
+         Hard Read Errors                   : 0
+         Hard Write Errors                  : 0
+         Hot Plug Count                     : 0
+         Media Failures                     : 0
+         Not Ready Errors                   : 0
+         Other Time Out Errors              : 0
+         Predictive Failures                : 0
+         Retry Recovered Read Errors        : 0
+         Retry Recovered Write Errors       : 0
+         Scsi Bus Faults                    : 0
+         Sectors Reads                      : 49
+         Sectors Written                    : 0
+         Service Hours                      : 0
+
+      Device #18
+         Device is a Hard drive
+         State                              : Raw (Pass Through)
+         Drive has stale RIS data           : False
+         Disk Name                          : /dev/sdk
+         Block Size                         : 512 Bytes
+         Physical Block Size                : 4K Bytes
+         Transfer Speed                     : SATA 6.0 Gb/s
+         Reported Channel,Device(T:L)       : 0,18(18:0)
+         Reported Location                  : Enclosure 1, Slot 10(Connector 0:CN0)
+         Vendor                             : ATA     
+         Model                              : HGST HUS726060AL
+         Firmware                           : APBDTAF0
+         Serial number                      : K8GJ8LSD
+         World-wide name                    : 59CE895DD30A000A
+         Reserved Size                      : 32768 KB
+         Total Size                         : 5723166 MB
+         S.M.A.R.T.                         : No
+         S.M.A.R.T. warnings                : 0
+         SSD                                : No
+         NCQ supported                      : Supported
+         NCQ status                         : Enabled
+         Boot Type                          : None
+         Rotational Speed                   : 7200 RPM
+         Current Temperature                : 29 deg C
+         Maximum Temperature                : 42 deg C
+         Threshold Temperature              : 65 deg C
+         PHY Count                          : 1
+         Drive Configuration Type           : HBA
+         Drive Encryption Capability        : None
+         Drive Encryption Status            : Not Applicable
+         Mount Point(s)                     : /xxx 4294399007 MB  Partition Number 0 
+         Drive Exposed to OS                : True
+         Sanitize Erase Support             : False
+         Drive Unique ID                    : 3FB42078FF7F7F50
+         Last Failure Reason                : No Failure
+      ----------------------------------------------------------------
+      Device Phy Information                
+      ----------------------------------------------------------------
+         Phy #0
+            Negotiated Physical Link Rate   : 6 Gbps 
+            Negotiated Logical Link Rate    : 6 Gbps 
+            Maximum Link Rate               : 6 Gbps 
+
+      ----------------------------------------------------------------
+      Device Error Counters                 
+      ----------------------------------------------------------------
+         Aborted Commands                   : 0
+         Bad Target Errors                  : 0
+         Ecc Recovered Read Errors          : 0
+         Failed Read Recovers               : 0
+         Failed Write Recovers              : 0
+         Format Errors                      : 0
+         Hardware Errors                    : 0
+         Hard Read Errors                   : 0
+         Hard Write Errors                  : 0
+         Hot Plug Count                     : 0
+         Media Failures                     : 0
+         Not Ready Errors                   : 0
+         Other Time Out Errors              : 0
+         Predictive Failures                : 0
+         Retry Recovered Read Errors        : 0
+         Retry Recovered Write Errors       : 0
+         Scsi Bus Faults                    : 0
+         Sectors Reads                      : 49
+         Sectors Written                    : 0
+         Service Hours                      : 0
+
+      Device #26
+         Device is a Hard drive
+         State                              : Raw (Pass Through)
+         Drive has stale RIS data           : False
+         Disk Name                          : /dev/sdl
+         Block Size                         : 512 Bytes
+         Physical Block Size                : 4K Bytes
+         Transfer Speed                     : SATA 6.0 Gb/s
+         Reported Channel,Device(T:L)       : 0,26(26:0)
+         Reported Location                  : Enclosure 1, Slot 28(Connector 0:CN0)
+         Vendor                             : ATA     
+         Model                              : INTEL SSDSC2BB48
+         Firmware                           : N2010112
+         Serial number                      : BTDV72440AG6480BGN
+         World-wide name                    : 59CE895DD30A001C
+         Reserved Size                      : 32768 KB
+         Total Size                         : 457862 MB
+         S.M.A.R.T.                         : No
+         S.M.A.R.T. warnings                : 0
+         SSD                                : Yes
+         NCQ supported                      : Supported
+         NCQ status                         : Enabled
+         Boot Type                          : None
+         Current Temperature                : 28 deg C
+         Maximum Temperature                : 40 deg C
+         Threshold Temperature              : 65 deg C
+         PHY Count                          : 1
+         Drive Configuration Type           : HBA
+         Drive Encryption Capability        : None
+         Drive Encryption Status            : Not Applicable
+         Mount Point(s)                     : /xxx 457862 MB  Partition Number 0 
+         Drive Exposed to OS                : True
+         Sanitize Erase Support             : False
+         Usage Remaining                    : 0 percent
+         Estimated Life Remaining           : Not Applicable
+         SSD Smart Trip Wearout             : False
+         56 Day Warning Present             : False
+         Drive Unique ID                    : 3FF90EABFFFFDD0E
+         Last Failure Reason                : No Failure
+      ----------------------------------------------------------------
+      Device Phy Information                
+      ----------------------------------------------------------------
+         Phy #0
+            Negotiated Physical Link Rate   : 6 Gbps 
+            Negotiated Logical Link Rate    : 6 Gbps 
+            Maximum Link Rate               : 6 Gbps 
+
+      ----------------------------------------------------------------
+      Device Error Counters                 
+      ----------------------------------------------------------------
+         Aborted Commands                   : 0
+         Bad Target Errors                  : 0
+         Ecc Recovered Read Errors          : 0
+         Failed Read Recovers               : 0
+         Failed Write Recovers              : 0
+         Format Errors                      : 0
+         Hardware Errors                    : 0
+         Hard Read Errors                   : 0
+         Hard Write Errors                  : 0
+         Hot Plug Count                     : 0
+         Media Failures                     : 0
+         Not Ready Errors                   : 0
+         Other Time Out Errors              : 0
+         Predictive Failures                : 0
+         Retry Recovered Read Errors        : 0
+         Retry Recovered Write Errors       : 0
+         Scsi Bus Faults                    : 0
+         Sectors Reads                      : 49
+         Sectors Written                    : 0
+         Service Hours                      : 0
+
+      Device #27
+         Device is a Hard drive
+         State                              : Raw (Pass Through)
+         Drive has stale RIS data           : False
+         Disk Name                          : /dev/sdm
+         Block Size                         : 512 Bytes
+         Physical Block Size                : 4K Bytes
+         Transfer Speed                     : SATA 6.0 Gb/s
+         Reported Channel,Device(T:L)       : 0,27(27:0)
+         Reported Location                  : Enclosure 1, Slot 29(Connector 0:CN0)
+         Vendor                             : ATA     
+         Model                              : INTEL SSDSC2BB48
+         Firmware                           : N2010112
+         Serial number                      : BTDV72440BB7480BGN
+         World-wide name                    : 59CE895DD30A001D
+         Reserved Size                      : 32768 KB
+         Total Size                         : 457862 MB
+         S.M.A.R.T.                         : No
+         S.M.A.R.T. warnings                : 0
+         SSD                                : Yes
+         NCQ supported                      : Supported
+         NCQ status                         : Enabled
+         Boot Type                          : None
+         Current Temperature                : 29 deg C
+         Maximum Temperature                : 42 deg C
+         Threshold Temperature              : 65 deg C
+         PHY Count                          : 1
+         Drive Configuration Type           : HBA
+         Drive Encryption Capability        : None
+         Drive Encryption Status            : Not Applicable
+         Mount Point(s)                     : /xxx 457862 MB  Partition Number 0 
+         Drive Exposed to OS                : True
+         Sanitize Erase Support             : False
+         Usage Remaining                    : 0 percent
+         Estimated Life Remaining           : Not Applicable
+         SSD Smart Trip Wearout             : False
+         56 Day Warning Present             : False
+         Drive Unique ID                    : BF1C1DA9FFFF5E6C
+         Last Failure Reason                : No Failure
+      ----------------------------------------------------------------
+      Device Phy Information                
+      ----------------------------------------------------------------
+         Phy #0
+            Negotiated Physical Link Rate   : 6 Gbps 
+            Negotiated Logical Link Rate    : 6 Gbps 
+            Maximum Link Rate               : 6 Gbps 
+
+      ----------------------------------------------------------------
+      Device Error Counters                 
+      ----------------------------------------------------------------
+         Aborted Commands                   : 0
+         Bad Target Errors                  : 0
+         Ecc Recovered Read Errors          : 0
+         Failed Read Recovers               : 0
+         Failed Write Recovers              : 0
+         Format Errors                      : 0
+         Hardware Errors                    : 0
+         Hard Read Errors                   : 0
+         Hard Write Errors                  : 0
+         Hot Plug Count                     : 0
+         Media Failures                     : 0
+         Not Ready Errors                   : 0
+         Other Time Out Errors              : 0
+         Predictive Failures                : 0
+         Retry Recovered Read Errors        : 0
+         Retry Recovered Write Errors       : 0
+         Scsi Bus Faults                    : 0
+         Sectors Reads                      : 49
+         Sectors Written                    : 0
+         Service Hours                      : 0
+
+   Channel #2:
+      Device #0
+         Device is an Enclosure Services Device
+         Reported Channel,Device(T:L)       : 2,0(0:0)
+         Reported Location                  : Connector 0:CN0, Enclosure 1
+         Enclosure ID                       : 1
+         Enclosure Logical Identifier       : 59CE895DD30A007E
+         Expander ID                        : 0
+         Expander SAS Address               : 59CE895DD30A007F
+         SEP device ID                      : 377
+         Type                               : SES2
+         Vendor                             : H3C-Exp
+         Model                              : SXP 36x12G
+         Firmware                           : RevB
+         Status of Enclosure Services Device
+            Speaker status                  : Not Available
+   Channel #2:
+      Device #3
+         Device is an Enclosure Services Device
+         Reported Channel,Device(T:L)       : 2,3(3:0)
+         Enclosure ID                       : 0
+         Enclosure Logical Identifier       : 50123456789ABC00
+         Type                               : SES2
+         Vendor                             : ADAPTEC 
+         Model                              : Virtual SGPIO
+         Firmware                           : 3.52
+         Status of Enclosure Services Device
+            Speaker status                  : Not Available
+
+
+Command completed successfully.
