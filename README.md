@@ -1,7 +1,20 @@
 # OneRaid
 OneRaid 是集合各种Raid卡操作小工具 🚀
 
-## 上手指南
+## 🐰上手指南
+<details>
+<summary><b>依赖安装（python3）</b></summary>
+1.. 安装ptable
+```bash
+    pip3 install ptable
+```
+</details>
+
+
+<details>
+<summary><b>依赖安装（docker构建）</b></summary>
+
+</details>
 
 
 ## 👾项目介绍
@@ -36,14 +49,14 @@ OneRaid 是集合各种Raid卡操作小工具 🚀
 
 ## 🐷目录结构
 
-项目docs文件包含一些帮助和说明文档, 还有各种raid控制器软件介绍说明和输出展示
+项目[docs](https://github.com/robertruan-x/OneRaid/tree/main/docs)文件包含一些帮助和说明文档, 还有各种raid控制器软件介绍说明和输出展示
 
 ## 🐼依赖环境
 - [ptables]() - python数据图表展示库
-- [arcconf]() - 一种raid控制软件
-- [strocli64]() - 一种raid控制软件
-- [precli64]() - 一种raid控制软件
-- [sas3iru]() - 一种raid控制软件
-- [sas2iru]() - 一种raid控制软件
+- [arcconf](https://github.com/robertruan-x/OneRaid/tree/main/docs/arcconf) - 一种raid控制软件
+- [strocli64](https://github.com/robertruan-x/OneRaid/tree/main/docs/strocli64) - 一种raid控制软件
+- [precli64](https://github.com/robertruan-x/OneRaid/tree/main/docs/precli64) - 一种raid控制软件
+- [sas3iru](https://github.com/robertruan-x/OneRaid/tree/main/docs/sas3iru) - 一种raid控制软件
+- [sas2iru](https://github.com/robertruan-x/OneRaid/tree/main/docs/sas2iru) - 一种raid控制软件
 
 ## 🐔后续计划
