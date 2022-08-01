@@ -14,7 +14,7 @@ from typing import Tuple
 import json
 from prettytable import PrettyTable
 
-__version__ = "0.0.17"
+__version__ = "0.0.18"
 
 DEBUG = 1
 
@@ -266,7 +266,7 @@ class Sas2iru(Sas3iru):
             pdinfo.controler_id = super().sas_re_search("Enclosure",pdinfostr)
             pdinfo.device_id = super().sas_re_search("Slot",pdinfostr)
             pdinfo.state = super().sas_re_search("State",pdinfostr)
-            pdinfo.size = super().sas_re_search("State",pdinfostr)
+            pdinfo.size = super().sas_re_search("Size",pdinfostr)
             pdinfo.sn= super().sas_re_search("Serial No",pdinfostr)
             pdinfo.manufacturer = self.sas_re_search("Manufacturer",pdinfostr)
             pdinfo.model = super().sas_re_search("Model Number",pdinfostr)

@@ -66,6 +66,7 @@ pip3 install ptable
 - [ ] 优化错误处理
 - [ ] 优化颜色输出
 - [ ] 安装软件包功能优化
+- [ ] docker自动打包程序
 
 更多信息请参阅 [开发计划](https://github.com/robertruan-x/OneRaid/blob/main/docs/todolist.md)
 
