@@ -469,6 +469,16 @@ def download_soft():
     if os.path.exists("/tmp/raid") == False:
         os.mkdir("/tmp/raid", 0o744)
     
+    # 需要下载的基础软件
+    cmd = "lspci --version"
+    # 解析原命令信息
+    output,errorcode = run_cmd(cmd)
+    if errorcode != 0:
+        download_core(
+            name='lspci',
+            path="yum安装路径",
+            cmd="yum install -y pciutils"
+        )     
     
 
     def download_core(name,path,cmd):
@@ -509,7 +519,8 @@ def download_soft():
                 name='Arcconf',
                 path=PATH_ARCCONF,
                 cmd="cd /tmp/raid && curl -skO {} && chmod 744 {}".format(DOWNLOAD_URL_ARCCONF,PATH_ARCCONF))    
-    
+
+        
 
 """
 sas3iru
@@ -660,10 +671,6 @@ if __name__ == '__main__':
     
 
     
-
-    # sas3 = Sas3iru("/usr/local/bin/sas3ircu",0)
-    # sas3.getPdlist()
-    # sas3.onLED_by_sn("WDWCC136UV6LRA")
 
 
 
