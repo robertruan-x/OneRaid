@@ -2,19 +2,54 @@
 OneRaid 是集合各种Raid卡操作小工具 🚀
 
 ## 🐰上手指南
+[![python](https://img.shields.io/badge/python-%3E%3D3.5-brightgreen)]()
 <details>
 <summary><b>依赖安装（python3）</b></summary>
-1. 安装ptable
+1. 安装prettytable
 
 ```bash
-pip3 install ptable
+pip3 install prettytable
 ```
+2. 此时你就能通过python3 运行one_raid.py
 
+3. (可选) 安装pyinstaller, 可以把python脚本打包成可执行二进制文件
+
+```bash
+# 安装pyinstaller
+pip3 install pyinstaller
+
+# 打包python脚本
+pyinstalller -F one_raid.py
+```
 </details>
 
 
 <details>
-<summary><b>依赖安装（docker构建）</b></summary>
+<summary><b>程序安装（docker构建）</b></summary>
+1. 直接拉去打包好的携带pyinstaller的docker 容器 
+
+```bash
+docker pull docker4robert/oneraid-builder
+```
+
+2. 使用docker镜像构建可执行文件
+
+```bash
+docker run --rm \
+    -v "${PWD}:/src" \
+    docker4robert/oneraid-builder \
+    --noconfirm \
+    --onefile \
+    --log-level DEBUG \
+    --clean \
+    one_raid.py
+```
+
+3. （可选）该镜像也可以自己构建
+
+```bash
+docker build -t your-oneraid-builder .
+```
 
 </details>
 
