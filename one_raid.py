@@ -2,7 +2,7 @@
 ############################################
 # FileName: one_raid.py
 # FileEnconding: UTF-8
-# Date: 2022-07-29
+# Date: 2022-08-11
 #############################################
 
 import argparse
@@ -14,7 +14,10 @@ from typing import Tuple
 import json
 from prettytable import PrettyTable
 
-__version__ = "0.0.18"
+from errors import *
+
+
+__version__ = "0.0.19"
 
 DEBUG = 1
 
@@ -343,14 +346,18 @@ class Storcli64(Raid):
                 pdinfo.remark = pdposition # 该扩展记录/cx/ex/sx的信息
             self.pdlist.append(pdinfo)
             
-    def create_raidX_core(self,raidlevel:int,devices:str,options:str="AWB RA Cached"): 
-        # devices 格式为 "32:2,32:4"
+    def create_raidX_core(self,raidlevel:int,devices:str,options:str): 
         
-        cmd = "{} {} add vd r{} size=all drives={} {}".format(self.cli,raidlevel,devices,options)
+        if options == "" :
+            options = "AWB RA Cached"
+        
+        # devices 格式为 "32:2,32:4"
+        cmd = "{} /c{} add vd r{} size=all drives={} {}".format(self.cli,self.adapterid,raidlevel,devices,options)
         output,returncode=run_cmd(cmd)
         if returncode== 0 :
             print("设备[{}] 添加raid{} 成功".format(devices,raidlevel))
     
+     
        
        
     def onLED_core(self,pdposition):
@@ -569,8 +576,10 @@ def get_PCIE_raid():
         pass
         
 
+def isNotNone(args):
+    return args != None
     
-        
+    
 if __name__ == '__main__':
 
     #  初始识别当前环境的
@@ -621,25 +630,38 @@ if __name__ == '__main__':
     
 
     # 自定义模式
-    if args.mode:
+    if isNotNone(args.mode):
         if args.mode == 1 : # 自动点亮未使用的磁盘
             for r in RAID_ALL:
                 r.getPdlist()
                 r.offLED_ALL()
                 r.onLED_by_auto()
     
-    if args.create and args.adapter_id:
-        raidlevel,devices,options = args.create  # 如果options没填的话不行
-        if args.create[0] == "raid0":
-            for r in RAID_ALL:
-                if r.adapterid == adapter_id:
-                    # r.getApinfo()
-                    r.getPdlist()
-                    r.create_raidX_core(0,devices,options)
-        else:
+    if isNotNone(args.create) :
+        try:
+            if ~isNotNone(args.adapter_id) :
+                raise OneRaidParserCreateRaidError("创建raid需要指定控制命令（adapter）id")
+            else:
+                raidlevel,devices,options = args.create  # 如果options没填的话不行
+                if args.create[0] == "raid0":
+                    for r in RAID_ALL:
+                        if r.adapterid == adapter_id:
+                            r.create_raidX_core(0,devices,options)
+                elif args.create[0] == "raid1":
+                    for r in RAID_ALL:
+                        if r.adapterid == adapter_id:
+                            r.create_raidX_core(1,devices,options)
+                elif args.create[0] == "raid10":
+                    for r in RAID_ALL:
+                        if r.adapterid == adapter_id:
+                            r.create_raidX_core(1,devices,options)
+                else:
+                    pass
+        except:
             pass
-    
-    if args.show :
+                
+        
+    if isNotNone(args.show) :
         if adapter_id :
             pass
         else:
@@ -648,7 +670,7 @@ if __name__ == '__main__':
                 r.getPdlist()
                 r.pretty_display()
 
-    if args.sns:
+    if isNotNone(args.sns):
         if adapter_id :
             pass
         else:
