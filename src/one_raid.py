@@ -356,6 +356,8 @@ class Storcli64(Raid):
         output,returncode=run_cmd(cmd)
         if returncode== 0 :
             print("设备[{}] 添加raid{} 成功".format(devices,raidlevel))
+        else:
+            raise OneRaidCommandError("创建raid需要指定控制命令（adapter）id")
     
      
        
@@ -639,7 +641,7 @@ if __name__ == '__main__':
     
     if isNotNone(args.create) :
         try:
-            if ~isNotNone(args.adapter_id) :
+            if not isNotNone(args.adapter_id) :
                 raise OneRaidParserCreateRaidError("创建raid需要指定控制命令（adapter）id")
             else:
                 raidlevel,devices,options = args.create  # 如果options没填的话不行

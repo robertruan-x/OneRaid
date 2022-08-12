@@ -10,6 +10,11 @@ ONERAID_DELETE_SELECT_CN=''
 ONERAID_DELETE_ALL_CN=''
 
 
+
+PERCCLI64_CREATE_RAID0_CN='/tmp/raid/perccli64 /c0 add vd r0 size=all drives=32:13 AWB RA Cache  PERCCLI64将控制器0的 32:12 这块磁盘制作成raid0，并且raid参数设置为AWB RA Cache'
+PERCCLI64_CREATE_RAID_RECOMMAND_CN='perccli64 创建raid需要先检查当前的缓存'
+
+
 ONERAID_PARSER_ERROR_CN="""\
     命令参数输入错误, {detail_error}
     
