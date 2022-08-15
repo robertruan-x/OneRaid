@@ -137,7 +137,7 @@ class Raid():
         for pd in self.pdlist:
             x.add_row([
                 pd.controler_id,
-                pd.device_id,
+                pd.device_group,
                 pd.sn,
                 pd.state,
                 pd.size,
@@ -151,7 +151,7 @@ class Raid():
 
         if self.vdlist:
             v = PrettyTable(
-                [u"设备组", u"Raid组id", u"sn", u"状态", u"读写模式", u"一致性", u"Raid组参数", u"容量"])
+                [u"设备组", u"Raid组id", u"状态", u"读写模式", u"一致性", u"Raid组参数",u"调度", u"容量"])
             for vd in self.vdlist:
                 v.add_row([
                     vd.device_id,
@@ -386,9 +386,10 @@ class Storcli64(Raid):
         cmd = "{} /c{}/vall show all J".format(self.cli, self.adapterid)
         # 解析原命令信息
         output, returncode = run_cmd(cmd)
-        if returncode != 0:
+        if returncode == 0:
+            self.format_vdinfo(output)        
+        else:
             raise OneRaidCommandGetVdlistError("获取raid组信息失败", self.__class__.__name__)
-            self.format_vdinfo(output)
         return []
 
     def format_vdinfo(self,output:str):
@@ -717,8 +718,8 @@ if __name__ == '__main__':
                             r.create_raidX_core(1, devices, options)
                 else:
                     pass
-        finally:
-            pass
+        except Exception as e:
+            print(e)
 
     if isNotNone(args.show):
         if adapter_id:
