@@ -164,7 +164,7 @@ class Raid():
                     vd.scheduled,
                     vd.size
                 ])
-            print(x.get_string(title="虚拟磁盘列表"))
+            print(v.get_string(title="虚拟磁盘列表"))
 
 
 
@@ -642,8 +642,8 @@ def get_PCIE_raid():
         pass
 
 
-def isNotNone(args):
-    return args != None
+def isTarggle(args):
+    return args != None and args != False  
 
 
 if __name__ == '__main__':
@@ -692,16 +692,16 @@ if __name__ == '__main__':
     adapter_id = 0
 
     # 自定义模式
-    if isNotNone(args.mode):
+    if isTarggle(args.mode):
         if args.mode == 1:  # 自动点亮未使用的磁盘
             for r in RAID_ALL:
                 r.getPdlist()
                 r.offLED_ALL()
                 r.onLED_by_auto()
 
-    if isNotNone(args.create):
+    if isTarggle(args.create):
         try:
-            if not isNotNone(args.adapter_id):
+            if not isTarggle(args.adapter_id):
                 raise OneRaidParserCreateRaidError("创建raid需要指定控制命令（adapter）id")
             else:
                 raidlevel, devices, options = args.create  # 如果options没填的话不行
@@ -723,7 +723,7 @@ if __name__ == '__main__':
             print(e)
             sys.exit(1)
 
-    if isNotNone(args.show):
+    if isTarggle(args.show):
         if adapter_id:
             pass
         else:
@@ -733,7 +733,7 @@ if __name__ == '__main__':
                 r.getVdlist()
                 r.pretty_display()
 
-    if isNotNone(args.sns):
+    if isTarggle(args.sns):
         if adapter_id:
             pass
         else:
@@ -746,8 +746,9 @@ if __name__ == '__main__':
                 for sn in args.sns:
                     r.onLED_by_sn(sn)
 
-    if isNotNone(args.unlocate):
+    if isTarggle(args.unlocate):
         for r in RAID_ALL:
             r.getPdlist()
             # 先关闭所有磁盘LED
             r.offLED_ALL()
+
