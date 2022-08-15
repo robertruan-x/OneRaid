@@ -138,7 +138,7 @@ class Raid():
         for pd in self.pdlist:
             x.add_row([
                 pd.controler_id,
-                pd.device_group,
+                pd.device_id,
                 pd.sn,
                 pd.state,
                 pd.size,
@@ -155,7 +155,7 @@ class Raid():
                 [u"设备组", u"Raid组id", u"状态", u"读写模式", u"一致性", u"Raid组参数",u"调度", u"容量"])
             for vd in self.vdlist:
                 v.add_row([
-                    vd.device_id,
+                    vd.device_group,
                     vd.vd_id,
                     vd.state,
                     vd.access_mode,
@@ -384,7 +384,7 @@ class Storcli64(Raid):
 
 
     def getVdlist(self) -> list:
-        cmd = "{} /c{}/vall show all J".format(self.cli, self.adapterid)
+        cmd = "{} /c{}/vall show J".format(self.cli, self.adapterid)
         # 解析原命令信息
         output, returncode = run_cmd(cmd)
         if returncode == 0:
