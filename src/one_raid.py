@@ -2,16 +2,17 @@
 ############################################
 # FileName: one_raid.py
 # FileEnconding: UTF-8
-# Date: 2022-08-11
+# Date: 2022-08-14
 #############################################
 
 import argparse
 import os
-from pydoc import classname
 import re
 import subprocess
-from typing import Tuple
 import json
+import sys
+
+from typing import Tuple
 from prettytable import PrettyTable
 
 from errors import *
@@ -720,6 +721,7 @@ if __name__ == '__main__':
                     pass
         except Exception as e:
             print(e)
+            sys.exit(1)
 
     if isNotNone(args.show):
         if adapter_id:
@@ -744,7 +746,7 @@ if __name__ == '__main__':
                 for sn in args.sns:
                     r.onLED_by_sn(sn)
 
-    if args.unlocate:
+    if isNotNone(args.unlocate):
         for r in RAID_ALL:
             r.getPdlist()
             # 先关闭所有磁盘LED
