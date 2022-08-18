@@ -17,7 +17,7 @@ from prettytable import PrettyTable
 
 from errors import *
 
-__version__ = "0.0.19"
+__version__ = "0.0.20"
 
 DEBUG = 1
 
@@ -401,16 +401,16 @@ class Storcli64(Raid):
             vdinfo.vd_id = vd.get("DG/VD").split("/")[1:2][0]
             vdinfo.state = vd.get("State")
             vdinfo.size = vd.get("Size")
-
             vdinfo.access_mode = vd.get("Access")
             vdinfo.consistent = vd.get("Consist")
             vdinfo.raid_detail = vd.get("Cache")
             vdinfo.scheduled = vd.get("sCC")
+            self.vdlist.append(vdinfo)
 
     def create_raidX_core(self, raidlevel: int, devices: str, options: str):
 
         if options == "":
-            options = "AWB RA Cached"
+            options = "WB RA Cached"
 
         # devices 格式为 "32:2,32:4"
         cmd = "{} /c{} add vd r{} size=all drives={} {}".format(self.cli, self.adapterid, raidlevel, devices, options)
@@ -418,10 +418,16 @@ class Storcli64(Raid):
         if returncode == 0:
             print("设备[{}] 添加raid{} 成功".format(devices, raidlevel))
         else:
-            raise OneRaidCommandGetVdlistError("创建raid组失败", self.__class__.__name__)
+            raise OneRaidCommandCreateRaidError("创建raid组失败", self.__class__.__name__)
 
-    def delete_raidX_core(self):
-        pass
+    def delete_raidX_core(self,vd_id:int):
+        cmd = "{} /c/v{} delete".format(self.cli, vd_id)
+        output, returncode = run_cmd(cmd)
+        if returncode == 0:
+            print("raid组[{}] 删除成功".format(vd_id))
+        else:
+            raise OneRaidCommandDeleteVdError("删除raid组失败", self.__class__.__name__)
+
 
     def onLED_core(self, pdposition):
         cmd = "{} {} start locate".format(self.cli, pdposition)
@@ -642,9 +648,6 @@ def get_PCIE_raid():
         pass
 
 
-def isTarggle(args):
-    return args != None and args != False  
-
 
 if __name__ == '__main__':
 
@@ -661,6 +664,11 @@ if __name__ == '__main__':
                         dest='adapter_id',
                         type=int,
                         help='指定控制器命令（adapter）的id')
+    parser.add_argument('-d', '--delete',
+                    dest='delete',
+                    type=int,
+                    metavar='virtualId',
+                    help='删除raid组')
     parser.add_argument('-c', '--create',
                         dest='create',
                         nargs='*',
@@ -692,16 +700,16 @@ if __name__ == '__main__':
     adapter_id = 0
 
     # 自定义模式
-    if isTarggle(args.mode):
+    if args.mode:
         if args.mode == 1:  # 自动点亮未使用的磁盘
             for r in RAID_ALL:
                 r.getPdlist()
                 r.offLED_ALL()
                 r.onLED_by_auto()
 
-    if isTarggle(args.create):
+    if args.create:
         try:
-            if not isTarggle(args.adapter_id):
+            if args.adapter_id:
                 raise OneRaidParserCreateRaidError("创建raid需要指定控制命令（adapter）id")
             else:
                 raidlevel, devices, options = args.create  # 如果options没填的话不行
@@ -723,7 +731,16 @@ if __name__ == '__main__':
             print(e)
             sys.exit(1)
 
-    if isTarggle(args.show):
+    if args.delete:
+        try:
+            if args.adapter_id:
+                raise OneRaidParserCreateRaidError("创建raid需要指定控制命令（adapter）id")
+        except Exception as e:
+            print(e)
+            sys.exit(1)   
+
+
+    if args.show:
         if adapter_id:
             pass
         else:
@@ -732,8 +749,8 @@ if __name__ == '__main__':
                 r.getPdlist()
                 r.getVdlist()
                 r.pretty_display()
-
-    if isTarggle(args.sns):
+    
+    if args.sns:
         if adapter_id:
             pass
         else:
@@ -746,7 +763,7 @@ if __name__ == '__main__':
                 for sn in args.sns:
                     r.onLED_by_sn(sn)
 
-    if isTarggle(args.unlocate):
+    if args.unlocate:
         for r in RAID_ALL:
             r.getPdlist()
             # 先关闭所有磁盘LED

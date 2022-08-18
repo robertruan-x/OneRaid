@@ -1,9 +1,9 @@
 
-
 import unittest
 
 from ..errors import OneRaidCommandGetVdlistError
-
+import sys
+sys.path.insert(0,"C:\\Users\\robert\\OneDrive\\Repos\\TEST\\OneRaid")
 
 class TestStringMethods(unittest.TestCase):
 

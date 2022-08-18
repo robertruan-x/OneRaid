@@ -9,14 +9,13 @@ ONERAID_CREATE_RAID10_CN = 'one_raid -a 0 -c raid10 "32:11,32:12" "AWB"    将�
 ONERAID_DELETE_SELECT_CN = ''
 ONERAID_DELETE_ALL_CN = ''
 
-PERCCLI64_CREATE_RAID0_CN = '/tmp/raid/perccli64 /c0 add vd r0 size=all drives=32:13 AWB RA Cache  PERCCLI64将控制器0的 32:12 这块磁盘制作成raid0，并且raid参数设置为AWB RA Cache'
+PERCCLI64_CREATE_RAID0_CN = '/tmp/raid/perccli64 /c0 add vd r0 size=all drives=32:13 WB RA Cache  PERCCLI64将控制器0的 32:12 这块磁盘制作成raid0，并且raid参数设置为WB RA Cache'
+PERCCLI64_DELETE_VD_CN = '/tmp/raid/perccli64 /c0/v0 delete 删除raid组0'
 PERCCLI64_SHOW_PRECACHE_CN = '/tmp/raid/perccli64 /c0 show preservedcache   显示当前已经掉盘，但是保留缓存的磁盘'
 PERCCLI64_SHOW_FOREIGN_CN = '/tmp/raid/perccli64 /c0/fall show  显示当前foreign状态的磁盘'
-PERCCLI64_CREATE_RAID_RECOMMEND_CN = 'perccli64 创建raid前需要先检查当前的磁盘是否存在foreign,以及是否有磁盘存在保留缓存(preservedcache)'
-
 PERCCLI64_GET_VDLIST_CN = '/tmp/raid/perccli64 /c0/vall show    显示制作了raid组的磁盘'
-
-
+PERCCLI64_CREATE_RAID_RECOMMEND_CN = 'perccli64 创建raid前需要先检查当前的磁盘是否存在foreign,以及是否有磁盘存在保留缓存(preservedcache)'
+PERCCLI64_DELETE_VD_RECOMMEND_CN = 'perccli64 创建raid前需要先检查当前的磁盘是否存在foreign,以及是否有磁盘存在保留缓存(preservedcache)'
 
 
 ONERAID_PARSER_ERROR_CN = """\
