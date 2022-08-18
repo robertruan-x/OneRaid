@@ -2,7 +2,7 @@
 ############################################
 # FileName: one_raid.py
 # FileEnconding: UTF-8
-# Date: 2022-08-14
+# Date: 2022-08-18
 #############################################
 
 import argparse
@@ -421,7 +421,7 @@ class Storcli64(Raid):
             raise OneRaidCommandCreateRaidError("创建raid组失败", self.__class__.__name__)
 
     def delete_raidX_core(self,vd_id:int):
-        cmd = "{} /c/v{} delete".format(self.cli, vd_id)
+        cmd = "{} /c{}/v{} delete".format(self.cli,self.adapterid,vd_id)
         output, returncode = run_cmd(cmd)
         if returncode == 0:
             print("raid组[{}] 删除成功".format(vd_id))
@@ -666,7 +666,7 @@ if __name__ == '__main__':
                         help='指定控制器命令（adapter）的id')
     parser.add_argument('-d', '--delete',
                     dest='delete',
-                    type=int,
+                    type=str,
                     metavar='virtualId',
                     help='删除raid组')
     parser.add_argument('-c', '--create',
@@ -709,7 +709,7 @@ if __name__ == '__main__':
 
     if args.create:
         try:
-            if args.adapter_id:
+            if not args.adapter_id:
                 raise OneRaidParserCreateRaidError("创建raid需要指定控制命令（adapter）id")
             else:
                 raidlevel, devices, options = args.create  # 如果options没填的话不行
@@ -734,7 +734,15 @@ if __name__ == '__main__':
     if args.delete:
         try:
             if args.adapter_id:
-                raise OneRaidParserCreateRaidError("创建raid需要指定控制命令（adapter）id")
+                raise OneRaidParserDeleteRaidError("删除raid组需要指定控制命令（adapter）id")
+            else:
+                vd_id = args.delete
+                if vd_id == "all":
+                    pass
+                else:
+                    for r in RAID_ALL:
+                        if r.adapterid == adapter_id:
+                            r.delete_raidX_core(vd_id)
         except Exception as e:
             print(e)
             sys.exit(1)   

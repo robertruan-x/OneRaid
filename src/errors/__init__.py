@@ -74,11 +74,12 @@ class OneRaidCommandCreateRaidError(OneRaidCommandError):
 
 class OneRaidCommandDeleteVdError(OneRaidCommandError):
     def message(self):
-        _DELETE_VD_CN = getVarOfRaid(" _DELETE_VD_CN", self._raid)
+        _DELETE_VD_CN = getVarOfRaid("_DELETE_VD_CN", self._raid)
+        _DELETE_VD_RECOMMEND_CN = getVarOfRaid("_DELETE_VD_RECOMMEND_CN", self._raid)
 
         return ONERAID_COMMAND_ERROR_CN.format(
             detail_error=self._message,
-            recommend="",
+            recommend=_DELETE_VD_RECOMMEND_CN,
             raw_command='\n\t'.join([_DELETE_VD_CN]))
 
 
