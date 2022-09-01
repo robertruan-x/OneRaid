@@ -2,7 +2,7 @@
 ############################################
 # FileName: one_raid.py
 # FileEnconding: UTF-8
-# Date: 2022-08-18
+# Date: 2022-09-01
 #############################################
 
 import argparse
@@ -17,7 +17,7 @@ from prettytable import PrettyTable
 
 from errors import *
 
-__version__ = "0.0.20"
+__version__ = "0.0.21"
 
 DEBUG = 1
 
@@ -542,6 +542,31 @@ class Arcconf(Raid):
             self.pdlist.append(pdinfo)
 
 
+    def onLED_core(self, controler_id, device_id,blink_time=2000):
+        cmd = "{} IDENTIFY {} DEVICE {} {} TIME {}".format(self.cli, self.adapterid, controler_id, device_id,blink_time)
+        output, code = run_cmd(cmd)
+        if code == 0:
+            super().log_success("成功点亮磁盘{}:{},默认点亮时间{}s".format(controler_id, device_id,blink_time))
+
+    def offLED_core(self, controler_id, device_id):
+        cmd = "{} IDENTIFY {} DEVICE {} {} STOP".format(self.cli, self.adapterid, controler_id, device_id)
+        run_cmd(cmd)
+
+    #  点亮功能通过sn
+    def onLED_by_sn(self, sn):
+        for pd in self.pdlist:
+            if pd.sn == sn:
+                self.onLED_core(pd.controler_id, pd.device_id)
+
+    # 自动点亮未挂载磁盘
+    def onLED_by_auto(self):
+        pass
+
+    # 关闭所有LED灯
+    def offLED_ALL(self):
+        cmd = "{} IDENTIFY {} ALL STOP".format(self.cli, self.adapterid)
+        run_cmd(cmd)
+
 def download_soft():
     if os.path.exists("/tmp/raid") == False:
         os.mkdir("/tmp/raid", 0o744)
@@ -662,7 +687,6 @@ if __name__ == '__main__':
                         help='显示raid整列卡以及其信息')
     parser.add_argument('-a', '--adapter',
                         dest='adapter_id',
-                        type=int,
                         help='指定控制器命令（adapter）的id')
     parser.add_argument('-d', '--delete',
                     dest='delete',
