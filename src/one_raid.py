@@ -2,7 +2,7 @@
 ############################################
 # FileName: one_raid.py
 # FileEnconding: UTF-8
-# Date: 2022-09-01
+# Date: 2022-09-08
 #############################################
 
 import argparse
@@ -17,7 +17,7 @@ from prettytable import PrettyTable
 
 from errors import *
 
-__version__ = "0.0.21"
+__version__ = "0.0.22"
 
 DEBUG = 1
 
@@ -628,11 +628,17 @@ sas3iru
 Serial Attached SCSI controller: Broadcom / LSI SAS3008 PCI-Express Fusion-MPT SAS-3 (rev 02)
 Serial Attached SCSI controller: LSI Logic / Symbios Logic SAS3008
 
+
+
+sas2iru
+RAID bus controller: Broadcom / LSI SAS2008 PCI-Express Fusion-MPT SAS-2 [Falcon] (rev 03)
+
 storcli
 RAID bus controller: Broadcom / LSI MegaRAID SAS-3 3008
 
 arcconf
 Serial Attached SCSI controller: Adaptec Series 8 12G SAS/PCIe 3
+Serial Attached SCSI controller: Adaptec Smart Storage PQI 12G SAS/PCIe 3
 """
 
 
@@ -648,7 +654,7 @@ def get_PCIE_raid():
                 sas3 = Sas3iru(PATH_SAS3IRU, sas3I)
                 RAID_ALL.append(sas3)
                 sas3I += 1
-            elif 'Serial Attached SCSI controller: Broadcom / LSI SAS2' in line:  # sas2iru
+            elif ('Serial Attached SCSI controller: Broadcom / LSI SAS2' in line) or ('RAID bus controller: Broadcom / LSI SAS2' in line):  # sas2iru
                 sas2 = Sas2iru(PATH_SAS2IRU, sas2I)
                 RAID_ALL.append(sas2)
                 sas2I += 1
@@ -662,7 +668,7 @@ def get_PCIE_raid():
                     perOrStor = Storcli64(PATH_STORCLI64, stroI)  # storcli
                     stroI += 1
                 RAID_ALL.append(perOrStor)
-            elif 'Serial Attached SCSI controller: Adaptec Series' in line:  # affconf
+            elif 'Serial Attached SCSI controller: Adaptec' in line:  # affconf
                 arff = Arcconf(PATH_ARCCONF, arffI)
                 RAID_ALL.append(arff)
                 arffI += 1
