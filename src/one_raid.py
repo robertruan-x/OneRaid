@@ -395,17 +395,19 @@ class Storcli64(Raid):
 
     def format_vdinfo(self,output:str):
         j = json.loads(output)
-        for vd in j.get("Controllers")[0].get("Response Data").get("Virtual Drives"):
-            vdinfo = Raid.Vdinfo()
-            vdinfo.device_group = vd.get("DG/VD").split("/")[0:1][0]
-            vdinfo.vd_id = vd.get("DG/VD").split("/")[1:2][0]
-            vdinfo.state = vd.get("State")
-            vdinfo.size = vd.get("Size")
-            vdinfo.access_mode = vd.get("Access")
-            vdinfo.consistent = vd.get("Consist")
-            vdinfo.raid_detail = vd.get("Cache")
-            vdinfo.scheduled = vd.get("sCC")
-            self.vdlist.append(vdinfo)
+        # 判空
+        if j.get("Controllers")[0].get("Response Data"):
+            for vd in j.get("Controllers")[0].get("Response Data").get("Virtual Drives"):
+                vdinfo = Raid.Vdinfo()
+                vdinfo.device_group = vd.get("DG/VD").split("/")[0:1][0]
+                vdinfo.vd_id = vd.get("DG/VD").split("/")[1:2][0]
+                vdinfo.state = vd.get("State")
+                vdinfo.size = vd.get("Size")
+                vdinfo.access_mode = vd.get("Access")
+                vdinfo.consistent = vd.get("Consist")
+                vdinfo.raid_detail = vd.get("Cache")
+                vdinfo.scheduled = vd.get("sCC")
+                self.vdlist.append(vdinfo)
 
     def create_raidX_core(self, raidlevel: int, devices: str, options: str):
 
@@ -584,7 +586,7 @@ def download_soft():
     if errorcode != 0:
         download_core(
             name='lspci',
-            path="yum安装路径",
+            path="/usr/sbin/lspci",
             cmd="yum install -y pciutils"
         )
 
@@ -635,6 +637,7 @@ RAID bus controller: Broadcom / LSI SAS2008 PCI-Express Fusion-MPT SAS-2 [Falcon
 
 storcli
 RAID bus controller: Broadcom / LSI MegaRAID SAS-3 3008
+RAID bus controller: LSI Logic / Symbios Logic MegaRAID SAS-3 3008 [Fury] (rev 02)
 
 arcconf
 Serial Attached SCSI controller: Adaptec Series 8 12G SAS/PCIe 3
@@ -658,7 +661,7 @@ def get_PCIE_raid():
                 sas2 = Sas2iru(PATH_SAS2IRU, sas2I)
                 RAID_ALL.append(sas2)
                 sas2I += 1
-            elif 'RAID bus controller: Broadcom / LSI MegaRAID' in line:
+            elif ('RAID bus controller: Broadcom / LSI MegaRAID' in line) or ('MegaRAID' in line):
                 cmd_isDELL = "dmidecode -s system-manufacturer"
                 output1, returncode1 = run_cmd(cmd_isDELL)
                 if output1.startswith('Dell'):
