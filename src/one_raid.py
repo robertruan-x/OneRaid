@@ -375,7 +375,7 @@ class Storcli64(Raid):
                 # 有点曲折
                 pdinfo.sn = json.loads(output1).get("Controllers")[0].get("Response Data").get(
                     "Drive {} - Detailed Information".format(pdposition)).get(
-                    "Drive {} Device attributes".format(pdposition)).get("SN")
+                    "Drive {} Device attributes".format(pdposition)).get("SN").strip()
                 pdinfo.manufacturer = json.loads(output1).get("Controllers")[0].get("Response Data").get(
                     "Drive {} - Detailed Information".format(pdposition)).get(
                     "Drive {} Device attributes".format(pdposition)).get("Manufacturer Id")
