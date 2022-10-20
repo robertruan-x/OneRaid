@@ -255,7 +255,7 @@ class Sas3iru(Raid):
     #  点亮功能通过sn
     def onLED_by_sn(self, sn):
         for pd in self.pdlist:
-            if pd.sn == sn:
+            if pd.sn.find(sn) != -1:
                 self.onLED_core(pd.controler_id, pd.device_id)
 
     # 自动点亮未挂载磁盘
@@ -444,7 +444,7 @@ class Storcli64(Raid):
     #  点亮功能通过sn
     def onLED_by_sn(self, sn):
         for pd in self.pdlist:
-            if pd.sn == sn:
+            if pd.sn.find(sn) != -1:
                 self.onLED_core(pd.remark)
 
     # 自动点亮未挂载磁盘
@@ -557,7 +557,7 @@ class Arcconf(Raid):
     #  点亮功能通过sn
     def onLED_by_sn(self, sn):
         for pd in self.pdlist:
-            if pd.sn == sn:
+            if pd.sn.find(sn) != -1:
                 self.onLED_core(pd.controler_id, pd.device_id)
 
     # 自动点亮未挂载磁盘
