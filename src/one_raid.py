@@ -2,7 +2,7 @@
 ############################################
 # FileName: one_raid.py
 # FileEnconding: UTF-8
-# Date: 2022-09-08
+# Date: 2022-10-20
 #############################################
 
 import argparse
@@ -17,7 +17,7 @@ from prettytable import PrettyTable
 
 from errors import *
 
-__version__ = "0.0.22"
+__version__ = "0.0.23"
 
 DEBUG = 1
 
@@ -569,28 +569,17 @@ class Arcconf(Raid):
         cmd = "{} IDENTIFY {} ALL STOP".format(self.cli, self.adapterid)
         run_cmd(cmd)
 
+
+
+def download_core(name, path, cmd):
+    if os.path.exists(path) == False:
+        output, returncode = run_cmd(cmd)
+        if returncode == 0:
+            print("[{}]软件安装成功,保存路径为:{}".format(name, path))
+
 def download_soft():
     if os.path.exists("/tmp/raid") == False:
         os.mkdir("/tmp/raid", 0o744)
-
-    def download_core(name, path, cmd):
-        if os.path.exists(path) == False:
-            output, returncode = run_cmd(cmd)
-            if returncode == 0:
-                print("[{}]软件安装成功,保存路径为:{}".format(name, path))
-
-    # 需要下载的基础软件
-    cmd = "lspci --version"
-    # 解析原命令信息
-    output, errorcode = run_cmd(cmd)
-    if errorcode != 0:
-        download_core(
-            name='lspci',
-            path="/usr/sbin/lspci",
-            cmd="yum install -y pciutils"
-        )
-
-
 
     # 按需下载软件包
     for raid in RAID_ALL:
@@ -646,6 +635,17 @@ Serial Attached SCSI controller: Adaptec Smart Storage PQI 12G SAS/PCIe 3
 
 
 def get_PCIE_raid():
+    # 需要下载的基础软件
+    cmd = "lspci --version"
+    # 解析原命令信息
+    output, errorcode = run_cmd(cmd)
+    if errorcode != 0:
+        download_core(
+            name='lspci',
+            path="/usr/sbin/lspci",
+            cmd="yum install -y pciutils"
+        )
+
     cmd = 'lspci | grep -i -E "scsi|raid"'
     output, returncode = run_cmd(cmd)
     if returncode == 0:
